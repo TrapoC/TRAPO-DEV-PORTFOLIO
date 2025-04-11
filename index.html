@@ -8,7 +8,7 @@
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E%3C/svg%3E"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRAPO Portfolio</title>
+    <title>TRAPO's Portfolio</title>
     <!-- Import Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -170,21 +170,21 @@
           <div class="menu-item overflow-hidden py-2">
             <a
               href="#projects"
-              class="text-5xl md:text-7xl font-display tracking-wider menu-item-text"
+              class="text-5xl md:text-7xl font-display hover:text-orange-600 tracking-wider menu-item-text"
               >PROJECTS</a
             >
           </div>
           <div class="menu-item overflow-hidden py-2">
             <a
               href="#about"
-              class="text-5xl md:text-7xl font-display tracking-wider menu-item-text"
+              class="text-5xl md:text-7xl font-display hover:text-orange-600 tracking-wider menu-item-text"
               >ABOUT</a
             >
           </div>
           <div class="menu-item overflow-hidden py-2">
             <a
               href="#contact"
-              class="text-5xl md:text-7xl font-display tracking-wider menu-item-text"
+              class="text-5xl md:text-7xl font-display hover:text-orange-600 tracking-wider menu-item-text"
               >CONTACT</a
             >
           </div>
@@ -199,10 +199,17 @@
         <div class="flex items-center justify-between">
           <a
             href="https://github.com/TrapoC"
-            class="text-2xl font-bold tracking-tighter hover:text-red-400"
+            class="text-2xl font-bold tracking-tighter hover:text-orange-600"
             >GITHUB</a
           >
-          <button id="menu-toggle" class="text-white cursor-none">MENU</button>
+          <div class="flex items-center space-x-4">
+            <button id="menu-toggle" class="text-white cursor-none">
+              MENU
+            </button>
+            <button id="menu-close" class="text-white cursor-none hidden">
+              CLOSE
+            </button>
+          </div>
         </div>
       </header>
 
@@ -211,11 +218,18 @@
         class="h-screen flex flex-col items-center justify-center text-center relative overflow-hidden px-4 sm:px-8"
       >
         <div class="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Hero background"
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
             class="w-full h-full object-cover opacity-50"
-          />
+          >
+            <source
+              src="./video/fav video.mp4"
+              type="video/mp4"
+            />
+          </video>
           <div class="absolute inset-0 bg-black bg-opacity-70"></div>
         </div>
 
@@ -223,7 +237,7 @@
           <h1
             class="text-5xl sm:text-7xl md:text-9xl font-display mb-4 sm:mb-6 tracking-wider"
           >
-            TRAPO'S<span class="text-gray-400 hover:text-red-400"
+            TRAPO'S<span class="text-gray-400 hover:text-orange-600"
               >PORTFOLIO</span
             >
           </h1>
@@ -231,8 +245,8 @@
           <p
             class="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-lg sm:max-w-2xl mx-auto mb-6 sm:mb-8"
           >
-            Creating bold experiences through graphics design and web
-            development
+            Creating communication and experiences through graphics design and
+            web development
           </p>
         </div>
 
@@ -243,15 +257,31 @@
             <div class="marquee inline-block">
               <span
                 class="text-2xl sm:text-4xl font-display tracking-wider px-4"
-                >GRAPHICS • DESIGN • WEB • DEVELOPMENT • GRAPHICS • DESIGN • WEB
-                • DEVELOPMENT • GRAPHICS • DESIGN • WEB • DEVELOPMENT</span
+                >• GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS DESIGN • WEB
+                DEVELOPMENT • GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS
+                DESIGN • WEB DEVELOPMENT • GRAPHICS DESIGN • WEB DEVELOPMENT
+                GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS DESIGN • WEB
+                DEVELOPMENT • GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS
+                DESIGN • WEB DEVELOPMENT • GRAPHICS DESIGN • WEB DEVELOPMENT •
+                GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS DESIGN • WEB
+                DEVELOPMENT • GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS
+                DESIGN • WEB DEVELOPMENT • GRAPHICS DESIGN • WEB DEVELOPMENT •
+                WEB DEVELOPMENT • GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS
+                DESIGN • WEB DEVELOPMENT •</span
               >
             </div>
             <div class="marquee inline-block">
               <span
                 class="text-2xl sm:text-4xl font-display tracking-wider px-4"
-                >GRAPHICS • DESIGN • WEB • DEVELOPMENT • GRAPHICS • DESIGN • WEB
-                • DEVELOPMENT • GRAPHICS • DESIGN • WEB • DEVELOPMENT</span
+                >• GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS DESIGN • WEB
+                DEVELOPMENT • GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS
+                DESIGN • WEB DEVELOPMENT • GRAPHICS DESIGN • WEB DEVELOPMENT
+                GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS DESIGN • WEB
+                DEVELOPMENT • GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS
+                DESIGN • WEB DEVELOPMENT • GRAPHICS DESIGN • WEB DEVELOPMENT •
+                GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS DESIGN • WEB
+                DEVELOPMENT GRAPHICS DESIGN • WEB DEVELOPMENT • GRAPHICS DESIGN
+                • WEB DEVELOPMENT •</span
               >
             </div>
           </div>
@@ -262,7 +292,7 @@
       <section id="projects" class="py-20 px-4 md:px-8">
         <div class="container mx-auto">
           <h2
-            class="text-5xl md:text-6xl font-display mb-16 tracking-wider reveal hover:text-red-400"
+            class="text-5xl md:text-6xl font-display mb-16 tracking-wider reveal hover:text-orange-600"
           >
             FEW SELECTED WORK
           </h2>
@@ -417,11 +447,11 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div class="reveal">
               <h2
-                class="text-5xl md:text-6xl font-display mb-8 tracking-wider hover:text-red-400"
+                class="text-5xl md:text-6xl font-display mb-8 tracking-wider hover:text-orange-600"
               >
                 ABOUT ME
               </h2>
-              <p class="text-xl text-gray-300 mb-6 hover:text-red-500">
+              <p class="text-xl text-gray-300 mb-6">
                 Hello! I’m Ifeanyi Christain, a passionate software developer
                 and graphics designer with a knack for turning imagination into
                 reality. Blessed with a vivid, creative mind, I thrive on
@@ -431,51 +461,24 @@
                 experiences that inspire and connect. Let’s work together to
                 transform your vision into something extraordinary!
               </p>
-              <p class="text-xl text-gray-300 hover:text-red-400">
-                I craft stunning designs and dynamic websites that bring ideas
-                to life. Whether it’s pixel-perfect visuals or seamless code, I
-                thrive on building experiences that inspire and engage. I've
-                collaborated with brands and individuals around the world,
-                bringing their visions to life through my unique perspective and
-                technical expertise. As a graphics designer and software
-                developer with a boundless imagination and a deep love for
-                creating visuals that captivate and inspire. As a graphics
-                designer, I specialize in transforming ideas into stunning,
-                meaningful designs that leave a lasting impression. Whether it’s
-                crafting eye-catching logos, sleek branding materials, or
-                vibrant digital artwork, I bring a blend of creativity and
-                precision to every project. My design journey is fueled by an
-                imaginative memory a gift that allows me to dream up original
-                concepts and turn them into reality. I see every blank canvas as
-                an opportunity to tell a story, evoke emotion, or solve a
-                problem through color, shape, and texture. From bold, modern
-                aesthetics to timeless, elegant compositions, I tailor my work
-                to reflect the unique vision of each client. With years of
-                experience honing my craft, I’ve mastered tools like Adobe
-                Photoshop, Illustrator, and more, enabling me to deliver
-                polished, professional results. But beyond technical skill, what
-                sets me apart is my ability to listen, interpret, and innovate.
-                I thrive on collaboration, taking your ideas and infusing them
-                with my creative spark to produce designs that not only look
-                amazing but also resonate with your audience. As a designer, I’m
-                also a problem-solver. I understand that great design isn’t just
-                about beauty it’s about purpose. Whether I’m designing for a
-                small business, a personal project, or a large-scale campaign, I
-                focus on creating visuals that communicate effectively and
-                achieve your goals. And with my background in software
-                development, I bring a unique perspective, seamlessly blending
-                design with functionality when building websites or digital
-                experiences. I’m passionate about pushing boundaries, exploring
-                new trends, and delivering work that stands out in a crowded
-                world. Let’s create something extraordinary together because
-                with imagination as our starting point, the possibilities are
-                endless.
+              <p class="text-xl text-gray-300">
+                As a graphics designer and software developer with a boundless
+                imagination and a deep love for creating visuals that captivate
+                and inspire. As a graphics designer, I specialize in
+                transforming ideas into stunning, meaningful designs that leave
+                a lasting impression. Whether it’s crafting eye-catching logos,
+                sleek branding materials, or vibrant digital artwork, I bring a
+                blend of creativity and precision to every project. My design
+                journey is fueled by an imaginative memory a gift that allows me
+                to dream up original concepts and turn them into reality. I see
+                every blank canvas as an opportunity to tell a story, evoke
+                emotion, or solve a problem through color, shape, and texture.
               </p>
             </div>
 
             <div class="reveal" data-delay="0.3">
               <img
-                src="./images/About me.jpg"
+                src="./images/IMG_0963.jpg"
                 alt="About"
                 class="w-full h-auto"
               />
@@ -484,11 +487,44 @@
         </div>
       </section>
 
+      <!-- New Section -->
+      <section id="crafting" class="py-20 px-4 md:px-8 bg-black">
+        <div class="container mx-auto">
+          <h2
+            class="text-5xl md:text-6xl font-display mb-8 tracking-wider hover:text-orange-600"
+          >
+            CRAFTING EXPERIENCES
+          </h2>
+          <p class="text-xl text-gray-300 mb-6">
+            Crafting engaging, user-centric communication and immersive digital
+            experiences through innovative graphic design and dynamic web
+            development.
+          </p>
+          <p class="text-lg text-white mb-6">
+            <strong class="hover:text-orange-600">GRAPHIC DESIGN:</strong>
+            Developing visually compelling branding, typography, color schemes,
+            and layouts that convey a clear message and evoke emotional
+            connections with the audience.
+          </p>
+          <p class="text-lg text-white mb-6">
+            <strong class="hover:text-orange-600">WEB DEVELOPMENT:</strong>
+            Building responsive, intuitive websites with seamless functionality,
+            optimized performance, and modern frameworks to ensure accessibility
+            and engagement across devices.
+          </p>
+          <p class="text-lg text-white mb-6">
+            <strong class="hover:text-orange-600">INTERATION:</strong> Combining
+            stunning visuals with robust code to create cohesive, interactive
+            experiences that align with business goals or personal visions.
+          </p>
+        </div>
+      </section>
+
       <!-- Contact Section -->
       <section id="contact" class="py-20 px-4 md:px-8">
         <div class="container mx-auto">
           <h2
-            class="text-5xl md:text-6xl font-display mb-16 tracking-wider reveal hover:text-red-400"
+            class="text-5xl md:text-6xl font-display mb-16 tracking-wider reveal hover:text-orange-600"
           >
             GET IN TOUCH
           </h2>
@@ -496,14 +532,14 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div class="reveal">
               <h3
-                class="text-2xl font-display tracking-wider mb-6 hover:text-red-400"
+                class="text-2xl font-display tracking-wider mb-6 hover:text-orange-600"
               >
                 CONTACT INFO
               </h3>
-              <p class="text-xl text-gray-300 mb-4 hover:text-blue-500">
+              <p class="text-xl text-gray-300 mb-4 hover:text-blue-700">
                 <a href="mailto:dagrind2nd@gmail.com">dagrind2nd@gmail.com</a>
               </p>
-              <p class="text-xl text-gray-300 mb-4 hover:text-blue-500">
+              <p class="text-xl text-gray-300 mb-4 hover:text-blue-400">
                 +1 (252) 592-1863 or +234 810-967-7402
               </p>
               <p class="text-xl text-gray-300 hover:text-green-500">
@@ -554,7 +590,7 @@
 
                 <button
                   type="submit"
-                  class="px-8 py-3 border border-white hover:bg-white transition-colors duration-300 hover:text-blue-500"
+                  class="px-8 py-3 border border-white hover:bg-white transition-colors duration-300 hover:text-orange-600"
                 >
                   <a href="mailto:dagrind2nd@gmail.com">SEND EMAIL</a>
                 </button>
@@ -570,7 +606,7 @@
           <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="mb-6 md:mb-0">
               <h3 class="text-2xl font-display tracking-wider">
-                TRAPO'S<span class="text-gray-400 hover:text-red-400"
+                TRAPO'S<span class="text-gray-400 hover:text-orange-600"
                   >PORTFOLIO</span
                 >
               </h3>
@@ -579,18 +615,18 @@
             <div class="flex space-x-8">
               <a
                 href="https://github.com/TrapoC"
-                class="hover:text-red-400 transition-colors"
+                class="hover:text-orange-600 transition-colors"
                 >GITHUB</a
               >
               <a
                 href="https://twitter.com/chris_trapo"
-                class="hover:text-red-400 transition-colors"
-                >Twitter</a
+                class="hover:text-orange-600 transition-colors"
+                >TWITTER</a
               >
               <a
                 href="https://linkedin.com/Ifeanyi_christian"
-                class="hover:text-red-400 transition-colors"
-                >LinkedIn</a
+                class="hover:text-orange-600 transition-colors"
+                >LINKEDIN</a
               >
             </div>
           </div>
@@ -642,25 +678,38 @@
         });
       });
 
-      // Menu toggle
-      const menuToggle = document.getElementById("menu-toggle");
-      const menuOverlay = document.querySelector(".menu-overlay");
+      document.addEventListener("DOMContentLoaded", () => {
+        // Menu toggle
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuClose = document.getElementById("menu-close");
+        const menuOverlay = document.querySelector(".menu-overlay");
 
-      if (menuToggle && menuOverlay) {
-        menuToggle.addEventListener("click", () => {
-          menuOverlay.classList.toggle("active");
-          menuToggle.textContent = menuOverlay.classList.contains("active")
-            ? "CLOSE"
-            : "MENU";
-        });
-      }
+        if (menuToggle && menuClose && menuOverlay) {
+          menuToggle.addEventListener("click", () => {
+            menuOverlay.classList.add("active");
+            menuToggle.classList.add("hidden");
+            menuClose.classList.remove("hidden");
+          });
 
-      // Close menu when clicking on menu items
-      const menuItems = document.querySelectorAll(".menu-item a");
-      menuItems.forEach((item) => {
-        item.addEventListener("click", () => {
-          if (menuOverlay) menuOverlay.classList.remove("active");
-          if (menuToggle) menuToggle.textContent = "MENU";
+          menuClose.addEventListener("click", () => {
+            menuOverlay.classList.remove("active");
+            menuClose.classList.add("hidden");
+            menuToggle.classList.remove("hidden");
+          });
+        }
+
+        // Close menu when clicking on menu items
+        const menuItems = document.querySelectorAll(".menu-item a");
+        menuItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            if (menuOverlay) menuOverlay.classList.remove("active");
+            if (menuClose && !menuClose.classList.contains("hidden")) {
+              menuClose.classList.add("hidden");
+            }
+            if (menuToggle && menuToggle.classList.contains("hidden")) {
+              menuToggle.classList.remove("hidden");
+            }
+          });
         });
       });
 
