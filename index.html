@@ -73,12 +73,12 @@
       }
 
       .smooth-scroll {
-        position: static; /* Changed from fixed to static */
+        position: relative; /* Ensure proper scrolling behavior */
         top: 0;
         left: 0;
         width: 100%;
         height: auto;
-        will-change: transform;
+        will-change: auto; /* Removed unnecessary transform optimization */
       }
 
       .menu-overlay {
@@ -899,7 +899,7 @@
       if (window.innerWidth > 768) {
         // Set the height of the body to match the scrollable content
         function setBodyHeight() {
-          document.body.style.height = `${scrollContainer.offsetHeight}px`;
+          document.body.style.height = `${scrollContainer.scrollHeight}px`; /* Fixed offsetHeight to scrollHeight */
         }
 
         // Update scroll position
@@ -924,8 +924,7 @@
           targetY = window.scrollY;
         });
       } else {
-        // Disable smooth scrolling on mobile
-        scrollContainer.style.position = "static";
+        scrollContainer.style.position = "relative"; /* Ensure proper scrolling on mobile */
       }
     </script>
   </body>
