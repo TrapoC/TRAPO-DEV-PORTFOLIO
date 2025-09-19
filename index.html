@@ -8,7 +8,7 @@
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E%3C/svg%3E"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trapo's Portfolio</title>
+    <title>Chris's Portfolio</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -266,7 +266,7 @@
           <h1
             class="text-5xl sm:text-7xl md:text-9xl font-display mb-4 sm:mb-6 tracking-wider"
           >
-            TRAPO'S<span class="text-gray-400 hover:text-orange-600"
+            CHRIS'S<span class="text-gray-400 hover:text-orange-600"
               >PORTFOLIO</span
             >
           </h1>
@@ -521,6 +521,52 @@
                 </div>
               </a>
             </div>
+
+            <!-- New Project 9 -->
+            <div class="project-item reveal" data-delay="0.9">
+              <a href="https://cardzzz.netlify.app/" class="block overflow-hidden">
+                <div class="overflow-hidden">
+                  <img
+                    src="images/Screenshot_19-9-2025_121618_cardzzz.netlify.app.jpeg"
+                    alt="Project 9"
+                    class="w-full h-auto project-image"
+                  />
+                </div>
+                <div class="mt-4">
+                  <h3
+                    class="text-2xl font-display tracking-wider hover:text-yellow-500"
+                  >
+                    CARDZZZ
+                  </h3>
+                  <p class="text-gray-400 hover:text-red-400">
+                    WEB DEVELOPMENT / 2025
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <!-- New Project 10 -->
+            <div class="project-item reveal" data-delay="1.0">
+              <a href="https://lendsqr1001.netlify.app/" class="block overflow-hidden">
+                <div class="overflow-hidden">
+                  <img
+                    src="images/LENDSQR.jpg"
+                    alt="Project 10"
+                    class="w-full h-auto project-image"
+                  />
+                </div>
+                <div class="mt-4">
+                  <h3
+                    class="text-2xl font-display tracking-wider hover:text-cyan-500"
+                  >
+                    LENDSQR
+                  </h3>
+                  <p class="text-gray-400 hover:text-red-400">
+                    WEB DEVELOPMENT / 2025
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -711,8 +757,8 @@
           </h2>
           <p class="text-xl text-gray-300 mb-6">
             Crafting engaging, user-centric communication and immersive digital
-            experiences through innovative graphic designs and dynamic web
-            developments.
+            experiences through innovative graphic design and dynamic web
+            development.
           </p>
           <p class="text-lg text-white mb-6">
             <strong class="hover:text-orange-600">GRAPHIC DESIGN:</strong>
@@ -754,10 +800,10 @@
                 <a href="mailto:dagrind2nd@gmail.com">dagrind2nd@gmail.com</a>
               </p>
               <p class="text-xl text-gray-300 mb-4 hover:text-blue-400">
-                +1 (252) 592-1863 or +234 810-967-7402
+                WhatsApp: +234 810-967-7402
               </p>
               <p class="text-xl text-gray-300 hover:text-green-500">
-                IKEJA. LAGOS, NIGERIA.
+               LAGOS, NIGERIA.
               </p>
             </div>
 
@@ -779,7 +825,7 @@
                 <div>
                   <label
                     for="email"
-                    class="block text-sm font-medium mb-2 hover:text-blue-600"
+                    class="block text-sm font-medium mb-2 hover:text-blue-500"
                     >Email</label
                   >
                   <input
@@ -792,7 +838,7 @@
                 <div>
                   <label
                     for="message"
-                    class="block text-sm font-medium mb-2 hover:text-blue-600"
+                    class="block text-sm font-medium mb-2 hover:text-blue-500"
                     >Message</label
                   >
                   <textarea
@@ -838,7 +884,7 @@
                 >TWITTER</a
               >
               <a
-                href="https://linkedin.com/TrapoC"
+                href="https://linkedin.com/Ifeanyi_christian"
                 class="hover:text-orange-600 transition-colors"
                 >LINKEDIN</a
               >
@@ -849,7 +895,7 @@
             class="mt-8 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center"
           >
             <p class="text-gray-500 text-sm">
-              © 2025 Trapo's Portfolio. All rights reserved.
+              © 2025 trapo's Portfolio. All rights reserved.
             </p>
             <div class="flex space-x-4 mt-4 md:mt-0">
               <a
@@ -968,7 +1014,7 @@
 
         revealElements.forEach((element) => {
           const revealTop = element.getBoundingClientRect().top;
-          const delay = element.getAttribute("data-delay") || 0;
+          const delay = parseFloat(element.getAttribute("data-delay")) || 0;
 
           if (revealTop < windowHeight - revealPoint) {
             setTimeout(() => {
@@ -979,48 +1025,82 @@
       }
 
       window.addEventListener("scroll", checkReveal);
-      window.addEventListener("load", checkReveal);
+      window.addEventListener("load", () => {
+        checkReveal();
+        setBodyHeight(); // Ensure body height is set on load
+      });
 
       // Smooth scroll effect
       let scrollContainer = document.querySelector(".smooth-scroll");
       let currentY = 0;
       let targetY = 0;
       const ease = 0.1;
+      let isScrolling = false;
 
-      // Only enable smooth scrolling on desktop
-      if (window.innerWidth > 768) {
-        // Set the height of the body to match the scrollable content
-        function setBodyHeight() {
-          const contentHeight = scrollContainer.offsetHeight;
-          const viewportHeight = window.innerHeight;
-          document.body.style.height = `${Math.max(contentHeight, viewportHeight)}px`; // Ensure body height matches content
-        }
+      function setBodyHeight() {
+        const footer = document.querySelector("footer");
+        const contentHeight = scrollContainer.scrollHeight;
+        const footerHeight = footer ? footer.offsetHeight : 0;
 
-        // Update scroll position
-        function updateScroll() {
-          currentY = parseFloat(lerp(currentY, targetY, ease)).toFixed(2);
-          scrollContainer.style.transform = `translateY(${-currentY}px)`;
-          requestAnimationFrame(updateScroll);
-        }
-
-        // Linear interpolation
-        function lerp(start, end, t) {
-          return start * (1 - t) + end * t;
-        }
-
-        window.addEventListener("resize", setBodyHeight);
-        window.addEventListener("load", () => {
-          setBodyHeight();
-          updateScroll();
-        });
-
-        window.addEventListener("scroll", () => {
-          targetY = window.scrollY;
-        });
-      } else {
-        scrollContainer.style.position =
-          "relative"; /* Ensure proper scrolling on mobile */
+        // Set body height to match the content height plus footer height
+        document.body.style.height = `${contentHeight + footerHeight}px`;
       }
+
+      function updateScroll() {
+        currentY = lerp(currentY, targetY, ease);
+        const maxScroll = scrollContainer.scrollHeight - window.innerHeight;
+        scrollContainer.style.transform = `translateY(${-Math.min(
+          currentY,
+          maxScroll
+        )}px)`;
+
+        if (Math.abs(currentY - targetY) > 0.5) {
+          isScrolling = true;
+          requestAnimationFrame(updateScroll);
+        } else {
+          isScrolling = false; // Stop animation when target is reached
+        }
+      }
+
+      window.addEventListener("resize", () => {
+        setBodyHeight();
+        targetY = Math.min(
+          window.scrollY,
+          scrollContainer.scrollHeight - window.innerHeight
+        ); // Prevent scrolling beyond footer
+        if (!isScrolling) updateScroll();
+      });
+
+      window.addEventListener("load", () => {
+        setBodyHeight();
+        updateScroll();
+      });
+
+      window.addEventListener("scroll", () => {
+        targetY = Math.min(
+          window.scrollY,
+          scrollContainer.scrollHeight - window.innerHeight
+        ); // Prevent scrolling beyond footer
+        if (!isScrolling) updateScroll();
+      });
+
+      // Linear interpolation
+      function lerp(start, end, t) {
+        return start * (1 - t) + end * t;
+      }
+
+      window.addEventListener("resize", setBodyHeight);
+      window.addEventListener("load", () => {
+        setBodyHeight();
+        updateScroll();
+      });
+
+      window.addEventListener("scroll", () => {
+        targetY = Math.min(
+          window.scrollY,
+          scrollContainer.scrollHeight - window.innerHeight
+        );
+      });
     </script>
   </body>
 </html>
